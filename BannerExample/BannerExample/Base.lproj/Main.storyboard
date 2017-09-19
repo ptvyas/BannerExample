@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqw-rn-aGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOW-zM-5O6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChV-Lb-5si">
+                                <rect key="frame" x="101" y="70" width="173" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqi-zs-gnU">
+                                <rect key="frame" x="60" y="272" width="275" height="36"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Show Video Ads">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowVideoAdsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Prf-X4-EUx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-UK-AUE">
+                                <rect key="frame" x="60" y="324" width="275" height="36"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Show Interstitial Ads">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowAdsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="11b-89-0SX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7M-o4-Gi5">
+                                <rect key="frame" x="8" y="376" width="359" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96m-r8-9A0" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="409" width="375" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aVk-lf-yKE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2CW-li-Que"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GADBanner Ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpW-3x-Vq3">
+                                <rect key="frame" x="8" y="567" width="359" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERm-s1-MsA" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="600" width="375" height="66.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aA6-2b-beH"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ERm-s1-MsA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1:1" id="2Q6-Jl-5Mn"/>
+                            <constraint firstItem="UpW-3x-Vq3" firstAttribute="top" secondItem="96m-r8-9A0" secondAttribute="bottom" constant="8" id="49f-FG-qzh"/>
+                            <constraint firstItem="96m-r8-9A0" firstAttribute="top" secondItem="l7M-o4-Gi5" secondAttribute="bottom" constant="4" id="EDu-MP-Jub"/>
+                            <constraint firstItem="ERm-s1-MsA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FcD-gM-7XQ"/>
+                            <constraint firstAttribute="centerX" secondItem="ERm-s1-MsA" secondAttribute="centerX" id="JGS-LE-fD3"/>
+                            <constraint firstItem="aqi-zs-gnU" firstAttribute="centerX" secondItem="MXt-UK-AUE" secondAttribute="centerX" id="LLH-4W-fLR"/>
+                            <constraint firstAttribute="centerX" secondItem="ChV-Lb-5si" secondAttribute="centerX" id="NIs-CX-Ldp"/>
+                            <constraint firstItem="MXt-UK-AUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="QWT-2C-Eud"/>
+                            <constraint firstItem="l7M-o4-Gi5" firstAttribute="top" secondItem="MXt-UK-AUE" secondAttribute="bottom" constant="16" id="XQW-4W-hIA"/>
+                            <constraint firstItem="aqi-zs-gnU" firstAttribute="width" secondItem="MXt-UK-AUE" secondAttribute="width" id="ap5-gF-lGz"/>
+                            <constraint firstItem="ChV-Lb-5si" firstAttribute="top" secondItem="cqw-rn-aGh" secondAttribute="bottom" constant="50" id="cAO-jl-Cb8"/>
+                            <constraint firstAttribute="trailing" secondItem="MXt-UK-AUE" secondAttribute="trailing" constant="40" id="dLV-AW-yce"/>
+                            <constraint firstItem="UpW-3x-Vq3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="fWT-FM-1bF"/>
+                            <constraint firstItem="aqi-zs-gnU" firstAttribute="height" secondItem="MXt-UK-AUE" secondAttribute="height" id="fwv-U3-fzC"/>
+                            <constraint firstItem="MXt-UK-AUE" firstAttribute="top" secondItem="aqi-zs-gnU" secondAttribute="bottom" constant="16" id="gas-cq-1Ng"/>
+                            <constraint firstItem="l7M-o4-Gi5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="j6u-CD-gFi"/>
+                            <constraint firstAttribute="trailing" secondItem="l7M-o4-Gi5" secondAttribute="trailing" constant="8" id="nPP-7b-asp"/>
+                            <constraint firstItem="96m-r8-9A0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ofR-XW-M2i"/>
+                            <constraint firstAttribute="trailing" secondItem="96m-r8-9A0" secondAttribute="trailing" id="pMA-Gb-86o"/>
+                            <constraint firstAttribute="bottom" secondItem="ERm-s1-MsA" secondAttribute="bottom" id="puV-V7-veJ"/>
+                            <constraint firstItem="ERm-s1-MsA" firstAttribute="top" secondItem="UpW-3x-Vq3" secondAttribute="bottom" constant="4" id="sgv-B2-Yla"/>
+                            <constraint firstAttribute="trailing" secondItem="UpW-3x-Vq3" secondAttribute="trailing" constant="8" id="yoy-JY-8P6"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bannerView" destination="ERm-s1-MsA" id="Nb2-2D-8l3"/>
+                        <outlet property="videoView" destination="96m-r8-9A0" id="BZH-GR-mmf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="166"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
