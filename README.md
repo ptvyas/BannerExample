@@ -1,2 +1,3 @@
 # BannerExample
-Set Google Ads (Obj.-C Language)
+
+Implement Google Ads (Objective-C Language)
